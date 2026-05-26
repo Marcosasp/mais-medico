@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mais Médicos — Cuidado que transforma</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast-container"></div>
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<header>
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">
+      <div class="logo-icon"><i class="fas fa-heart-pulse"></i></div>
+      Mais<span>Médicos</span>
+    </a>
+    <nav>
+      <a href="#inicio" class="active">Início</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a href="admin.html"><i class="fas fa-shield-halved" style="margin-right:5px"></i>Área Admin</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-icon" id="themeToggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+      </button>
+      <a href="#contato" class="btn btn-primary">
+        <i class="fas fa-calendar-check"></i>Agendar consulta
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio">Início</a>
+  <a href="#especialidades">Especialidades</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contato">Contato</a>
+  <a href="admin.html"><i class="fas fa-shield-halved"></i> Área Admin</a>
+  <a href="#contato" class="btn btn-primary">Agendar consulta</a>
+</div>
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow">Cuidado que transforma vidas</div>
+      <h1>Cuidar da sua <em>saúde</em> é nossa maior especialidade</h1>
+      <p>Atendimento humanizado, tecnologia moderna e profissionais qualificados para cuidar de você e da sua família.</p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn btn-primary"><i class="fas fa-calendar-check"></i>Agende sua consulta</a>
+        <a href="#especialidades" class="btn btn-ghost"><i class="fas fa-stethoscope"></i>Conheça nossos planos</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">12<span>+</span></div>
+          <div class="stat-label">Anos de experiência</div>
+        </div>
+        <div>
+          <div class="stat-num">8<span>k</span></div>
+          <div class="stat-label">Pacientes atendidos</div>
+        </div>
+        <div>
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Satisfação</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-blob"></div>
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <div class="avatar"><i class="fas fa-user-doctor"></i></div>
+          <div class="hero-card-info">
+            <h4>Dr. Carlos Mendes</h4>
+            <p><span class="status-dot"></span>Disponível agora</p>
+          </div>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-row"><span class="lbl">Especialidade</span><span class="val">Clínica Geral</span></div>
+        <div class="card-row"><span class="lbl">Próxima consulta</span><span class="val">Hoje, 14:30</span></div>
+        <div class="card-row"><span class="lbl">Modalidade</span><span class="val" style="color:var(--mint)">Presencial</span></div>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <p style="font-size:.7rem;color:var(--muted);margin-top:7px">68% das vagas preenchidas hoje</p>
+      </div>
+      <div class="floating-badge badge-1"><span>🌿</span><span>Telemedicina disponível</span></div>
+      <div class="floating-badge badge-2"><span>✅</span><span>+30 convênios</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ESPECIALIDADES ══════════════════════════════════════ -->
+<section class="section" id="especialidades" style="background:var(--surface)">
+  <div class="container">
+    <div class="specs-header reveal">
+      <span class="tag">O que oferecemos</span>
+      <h2>Especialidades para toda a família</h2>
+      <p>Equipe multidisciplinar pronta para o melhor atendimento em cada área da saúde.</p>
+    </div>
+    <div class="specs-grid" id="specsGrid">
+      <div class="spec-loading"><i class="fas fa-spinner fa-spin" style="font-size:1.5rem;margin-bottom:8px;display:block"></i>Carregando especialidades...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOBRE NÓS ═══════════════════════════════════════════ -->
+<section class="section" id="sobre">
+  <div class="container about-grid">
+    <div class="about-visual reveal">
+      <div class="about-img-wrap">🩺</div>
+      <div class="about-cert">
+        <div class="num">15+</div>
+        <div class="desc">especialistas dedicados à sua saúde</div>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <span class="tag">Sobre nós</span>
+      <h2>Saúde com propósito e humanidade</h2>
+      <p>A Mais Médicos nasceu da convicção de que a medicina deve ir além do diagnóstico — ela precisa acolher, ouvir e transformar vidas. Desde 2012, atuamos com ética, empatia e excelência técnica.</p>
+      <p>Nossa missão é oferecer acesso à saúde de qualidade com atendimento próximo e personalizado, unindo a melhor tecnologia ao calor humano que cada paciente merece.</p>
+      <div class="differentials">
+        <div class="diff-item"><i class="fas fa-bolt"></i><div><strong>Atendimento ágil</strong><span>Agendamento online em minutos</span></div></div>
+        <div class="diff-item"><i class="fas fa-id-card"></i><div><strong>Convênios</strong><span>+30 planos de saúde aceitos</span></div></div>
+        <div class="diff-item"><i class="fas fa-building-columns"></i><div><strong>Estrutura moderna</strong><span>Equipamentos de última geração</span></div></div>
+        <div class="diff-item"><i class="fas fa-video"></i><div><strong>Telemedicina</strong><span>Consultas online disponíveis</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DEPOIMENTOS ═════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface)">
+  <div class="container">
+    <div class="test-header reveal">
+      <span class="tag">Depoimentos</span>
+      <h2>O que nossos pacientes dizem</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"O atendimento foi além das minhas expectativas. A Dra. Ana foi atenciosa, explicou tudo com clareza e me deixou muito tranquila."</p>
+        <div class="test-author"><div class="test-avatar">RS</div><div><div class="test-name">Roberta Santos</div><div class="test-role">Paciente há 3 anos</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Fiz o acompanhamento pediátrico do meu filho aqui desde o nascimento. A equipe é incrível, sempre carinhosa e eficiente!"</p>
+        <div class="test-author"><div class="test-avatar">FM</div><div><div class="test-name">Felipe Martins</div><div class="test-role">Pai de paciente</div></div></div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"As sessões de psicologia mudaram minha vida. Um ambiente seguro e profissional extremamente qualificado. Recomendo a todos!"</p>
+        <div class="test-author"><div class="test-avatar">LC</div><div><div class="test-name">Larissa Costa</div><div class="test-role">Paciente há 1 ano</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTATO ═════════════════════════════════════════════ -->
+<section class="section" id="contato">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <span class="tag">Fale conosco</span>
+      <h2>Agende sua consulta hoje</h2>
+      <p>Estamos prontos para atender você com toda a atenção e cuidado que você merece.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+          <div><h4 style="font-size:.8rem;font-weight:700;margin-bottom:2px">Endereço</h4><p style="font-size:.82rem;color:var(--muted);margin:0">Av. da Saúde, 1200, Sala 301<br>Centro — Belo Horizonte, MG</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-phone"></i></div>
+          <div><h4 style="font-size:.8rem;font-weight:700;margin-bottom:2px">Telefone / WhatsApp</h4><p style="font-size:.82rem;color:var(--muted);margin:0">(31) 99999-8888 / (31) 3222-5500</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div><h4 style="font-size:.8rem;font-weight:700;margin-bottom:2px">E-mail</h4><p style="font-size:.82rem;color:var(--muted);margin:0">contato@maismedicos.com.br</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-clock"></i></div>
+          <div><h4 style="font-size:.8rem;font-weight:700;margin-bottom:2px">Horário</h4><p style="font-size:.82rem;color:var(--muted);margin:0">Seg–Sex: 08h às 18h | Sáb: 08h às 12h</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="form-card">
+        <div id="formWrapper">
+          <h3 class="form-title">Solicitação de agendamento</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome completo *</label>
+                <input type="text" id="nome" placeholder="Seu nome completo">
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" placeholder="seu@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+              </div>
+              <div class="form-group">
+                <label for="especialidade">Especialidade *</label>
+                <select id="especialidade">
+                  <option value="">Selecione...</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="data">Data preferencial *</label>
+                <input type="date" id="data">
+              </div>
+              <div class="form-group">
+                <label for="hora">Horário *</label>
+                <select id="hora">
+                  <option value="">Selecione...</option>
+                  <option>08:00</option><option>08:30</option>
+                  <option>09:00</option><option>09:30</option>
+                  <option>10:00</option><option>10:30</option>
+                  <option>11:00</option><option>11:30</option>
+                  <option>13:00</option><option>13:30</option>
+                  <option>14:00</option><option>14:30</option>
+                  <option>15:00</option><option>15:30</option>
+                  <option>16:00</option><option>16:30</option>
+                  <option>17:00</option><option>17:30</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem (opcional)</label>
+              <textarea id="mensagem" placeholder="Descreva brevemente o motivo da consulta..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+              <i class="fas fa-paper-plane"></i>Enviar solicitação
+            </button>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-circle-check"></i>
+          <h3>Solicitação enviada!</h3>
+          <p>Em breve nossa equipe entrará em contato para confirmar seu agendamento. Obrigado pela confiança!</p>
+          <button class="btn btn-ghost" style="margin-top:18px" onclick="resetForm()">Novo agendamento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon"><i class="fas fa-heart-pulse"></i></div>Mais<span>Médicos</span></div>
+        <p>Saúde com propósito, cuidado com humanidade. Desde 2012 transformando a experiência médica em Minas Gerais.</p>
+        <div class="social-row">
+          <a class="social-btn" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="social-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-btn" href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a class="social-btn" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Especialidades</h4>
+        <ul>
+          <li><a href="#contato">Clínica Geral</a></li>
+          <li><a href="#contato">Pediatria</a></li>
+          <li><a href="#contato">Ginecologia</a></li>
+          <li><a href="#contato">Psicologia</a></li>
+          <li><a href="#contato">Telemedicina</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horários</h4>
+        <div>
+          <div class="hours-row"><span>Seg — Sex</span>08h às 18h</div>
+          <div class="hours-row"><span>Sábado</span>08h às 12h</div>
+          <div class="hours-row"><span>Domingo</span>Fechado</div>
+          <p style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:14px"><i class="fas fa-location-dot" style="color:var(--mint);margin-right:5px"></i>Av. da Saúde, 1200 — BH, MG</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Mais Médicos. Todos os direitos reservados.</span>
+      <span>Desenvolvido com <span style="color:var(--mint)">♥</span> · <a href="#">Privacidade</a> · <a href="#">Termos</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

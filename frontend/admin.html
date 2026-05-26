@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel Admin — Mais Médicos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+<div id="toast-container"></div>
+
+<!-- ══ ADMIN HEADER ════════════════════════════════════════ -->
+<div class="admin-header">
+  <a href="index.html" class="logo">
+    <div class="logo-icon"><i class="fas fa-heart-pulse"></i></div>
+    Mais<span style="color:var(--mint)">Médicos</span>
+    <span style="font-size:.72rem;font-weight:500;color:var(--muted);margin-left:8px;padding:3px 10px;background:var(--mint-lt);border-radius:100px">Admin</span>
+  </a>
+  <div class="admin-header-right">
+    <button class="btn-icon" id="themeToggle"><i class="fas fa-moon"></i></button>
+    <span id="adminName" style="font-weight:600;color:var(--text)"></span>
+    <button class="btn btn-ghost btn-sm" id="logoutBtn">
+      <i class="fas fa-right-from-bracket"></i>Sair
+    </button>
+  </div>
+</div>
+
+<!-- ══ ADMIN CONTENT ════════════════════════════════════════ -->
+<div class="admin-container">
+  <h1 class="admin-title">Painel de Agendamentos</h1>
+  <p class="admin-subtitle">Gerencie todas as consultas e agendamentos da clínica</p>
+
+  <!-- Stats -->
+  <div class="stats-row" id="statsRow">
+    <div class="stat-card c-mint"><div class="num" id="statTotal">—</div><div class="lbl">Total de agendamentos</div></div>
+    <div class="stat-card"><div class="num" id="statPendente" style="color:var(--warn)">—</div><div class="lbl">Pendentes</div></div>
+    <div class="stat-card"><div class="num" id="statConfirmado" style="color:var(--mint)">—</div><div class="lbl">Confirmados</div></div>
+    <div class="stat-card"><div class="num" id="statCancelado" style="color:var(--danger)">—</div><div class="lbl">Cancelados</div></div>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-card" id="chartCard">
+    <h3><i class="fas fa-chart-bar" style="margin-right:8px;color:var(--mint)"></i>Agendamentos por Especialidade</h3>
+    <div class="chart-bars" id="chartBars">
+      <div class="spec-loading"><i class="fas fa-spinner fa-spin"></i></div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="admin-controls">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab active" data-filter="">Todos</button>
+      <button class="filter-tab" data-filter="pendente"><i class="fas fa-clock" style="margin-right:5px"></i>Pendentes</button>
+      <button class="filter-tab" data-filter="confirmado"><i class="fas fa-check" style="margin-right:5px"></i>Confirmados</button>
+      <button class="filter-tab" data-filter="cancelado"><i class="fas fa-xmark" style="margin-right:5px"></i>Cancelados</button>
+    </div>
+    <div class="search-wrap">
+      <i class="fas fa-search"></i>
+      <input type="text" class="search-input" id="searchInput" placeholder="Buscar por nome ou e-mail...">
+    </div>
+    <button class="btn btn-ghost btn-sm" id="refreshBtn"><i class="fas fa-rotate-right"></i>Atualizar</button>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Paciente</th>
+          <th>Especialidade</th>
+          <th>Data & Hora</th>
+          <th>Contato</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr><td colspan="7" class="empty-state"><i class="fas fa-spinner fa-spin"></i>Carregando...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p id="tableCount" style="font-size:.78rem;color:var(--muted);margin-top:12px;text-align:right"></p>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
