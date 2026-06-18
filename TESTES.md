@@ -1,6 +1,6 @@
-# 🧪 Relatório de Testes — Mais Médicos
+# 🧪 Relatório de Testes — CuidarBem
 
-**Data:** 27/05/2026  
+**Data:** 17/06/2026  
 **Resultado geral:** ✅ 25 aprovados / ❌ 0 reprovados / 25 total  
 **Status:** 🟢 APROVADO
 
@@ -10,13 +10,13 @@
 
 | ID | Teste | Resultado |
 |----|-------|-----------|
-| T01 | Especialidades existem no banco | ✅ PASS |
-| T02 | Seed: 4 especialidades inseridas | ✅ PASS |
-| T03 | Especialidade "Clínica Geral" existe | ✅ PASS |
-| T04 | Especialidade "Pediatria" existe | ✅ PASS |
-| T05 | Especialidade "Ginecologia" existe | ✅ PASS |
-| T06 | Especialidade "Psicologia" existe | ✅ PASS |
-| T07 | Agendamentos demo no banco (≥4) | ✅ PASS |
+| T01 | Serviços existem no banco | ✅ PASS |
+| T02 | Seed: 6 serviços inseridos | ✅ PASS |
+| T03 | Serviço "Curativos e Procedimentos" existe | ✅ PASS |
+| T04 | Serviço "Administração de Medicação" existe | ✅ PASS |
+| T05 | Serviço "Home Care" existe | ✅ PASS |
+| T06 | Serviço "Monitoramento de Saúde" existe | ✅ PASS |
+| T07 | Agendamentos demo no banco (≥5) | ✅ PASS |
 
 ---
 
@@ -24,11 +24,11 @@
 
 | ID | Teste | Resultado |
 |----|-------|-----------|
-| T08 | Inserir novo agendamento | ✅ PASS |
+| T08 | Solicitar novo atendimento | ✅ PASS |
 | T09 | Status inicial é "pendente" | ✅ PASS |
 | T10 | Conflito de horário detectado corretamente | ✅ PASS |
-| T11 | Confirmar agendamento (status → confirmado) | ✅ PASS |
-| T12 | Cancelar agendamento (status → cancelado) | ✅ PASS |
+| T11 | Confirmar atendimento (status → confirmado) | ✅ PASS |
+| T12 | Cancelar atendimento (status → cancelado) | ✅ PASS |
 | T13 | Busca por nome funciona | ✅ PASS |
 | T14 | Filtro por status "pendente" | ✅ PASS |
 | T15 | Filtro por status "confirmado" | ✅ PASS |
@@ -67,14 +67,14 @@
 | Modo claro/escuro com persistência | ✅ Implementado |
 | Menu hambúrguer mobile | ✅ Implementado |
 | Smooth scroll entre seções | ✅ Implementado |
-| Especialidades carregadas via API | ✅ Implementado |
+| Serviços carregados via API | ✅ Implementado |
 | Formulário com validação client-side | ✅ Implementado |
 | Máscara de telefone automática | ✅ Implementado |
-| Mensagem de sucesso ao agendar | ✅ Implementado |
+| Mensagem de sucesso ao solicitar atendimento | ✅ Implementado |
 | Toast de erro em caso de falha | ✅ Implementado |
 | Painel admin protegido por login | ✅ Implementado |
 | Redirect para login se não autenticado | ✅ Implementado |
-| Gráfico de agendamentos por especialidade | ✅ Implementado |
+| Gráfico de agendamentos por serviço | ✅ Implementado |
 | Filtro por status no painel admin | ✅ Implementado |
 | Busca em tempo real no painel admin | ✅ Implementado |
 | Logout funcional | ✅ Implementado |

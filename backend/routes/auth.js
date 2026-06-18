@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const ADMIN_EMAIL = 'admin@maismedicos.com';
-const ADMIN_SENHA = 'medicina2025';
-const FAKE_TOKEN = 'mm-admin-token-2025-secure';
+const ADMIN_EMAIL = 'admin@cuidarbem.com.br';
+const ADMIN_SENHA = 'enfermagem2026';
+const FAKE_TOKEN = 'cb-admin-token-2026';
 
 // POST /api/login
 router.post('/', (req, res) => {
@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
     return res.json({
       sucesso: true,
       token: FAKE_TOKEN,
-      usuario: { nome: 'Administrador', email: ADMIN_EMAIL }
+      usuario: { nome: 'Admin CuidarBem', email: ADMIN_EMAIL }
     });
   }
 

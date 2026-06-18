@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   MAIS MÉDICOS — script.js  (página pública)
+   CUIDARBEM — script.js  (página pública)
    ═══════════════════════════════════════════════════════════ */
 
 const API = ''; // same origin when served by Express

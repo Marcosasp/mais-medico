@@ -1,14 +1,15 @@
 {
-  "name": "mais-medicos-backend",
+  "name": "cuidarbem-backend",
   "version": "1.0.0",
-  "description": "Backend do sistema Mais Médicos",
+  "description": "Backend do sistema CuidarBem — Serviços de Enfermagem",
   "main": "server.js",
+  "private": true,
+  "engines": { "node": ">=18" },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "dependencies": {
-    "better-sqlite3": "^9.4.3",
     "cors": "^2.8.6",
     "express": "^4.22.2",
     "sql.js": "^1.14.1"
