@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   MAIS MÉDICOS — admin.js
+   CUIDARBEM — admin.js
    ═══════════════════════════════════════════════════════════ */
 
 const API   = '';
@@ -63,7 +63,12 @@ async function loadAgendamentos() {
       headers: { 'Authorization': `Bearer ${TOKEN}` }
     });
 
-    if (res.status === 401) { window.location.href = 'login.html'; return; }
+    if (res.status === 401) {
+      localStorage.removeItem('mm-admin-token');
+      localStorage.removeItem('mm-admin-user');
+      window.location.href = 'login.html';
+      return;
+    }
     if (!res.ok) throw new Error('Erro ao buscar agendamentos');
 
     allAgendamentos = await res.json();
@@ -169,20 +174,23 @@ function renderChart(data) {
     counts[k] = (counts[k] || 0) + 1;
   });
 
-  const entries = Object.entries(counts);
+  const entries = Object.entries(counts).sort(([,a],[,b]) => b - a);
   if (!entries.length) {
     container.innerHTML = '<span style="color:var(--muted);font-size:.85rem">Sem dados para exibir</span>';
     return;
   }
 
-  const max = Math.max(...entries.map(([,v]) => v));
+  const MAX_H  = 110;
+  const MIN_H  = 28;
+  const max    = Math.max(...entries.map(([,v]) => v));
   container.innerHTML = entries.map(([name, val]) => {
-    const h = max > 0 ? Math.round((val / max) * 100) : 0;
+    const h   = max > 0 ? Math.max(MIN_H, Math.round((val / max) * MAX_H)) : MIN_H;
+    const lbl = name.length > 12 ? name.slice(0, 11) + '…' : name;
     return `
       <div class="chart-col">
         <div class="chart-bar-val">${val}</div>
-        <div class="chart-bar" style="height:${h}px"></div>
-        <div class="chart-bar-lbl">${name.split(' ')[0]}</div>
+        <div class="chart-bar" style="height:${h}px" title="${name}"></div>
+        <div class="chart-bar-lbl" title="${name}">${lbl}</div>
       </div>
     `;
   }).join('');

@@ -53,10 +53,12 @@ function initSchema() {
 
 function seedData() {
   const especialidades = [
-    { nome: 'Clínica Geral', descricao: 'Diagnóstico e tratamento das condições mais comuns do dia a dia, orientando você para o cuidado contínuo da saúde.', icone: 'fa-stethoscope' },
-    { nome: 'Pediatria', descricao: 'Acompanhamento especializado no desenvolvimento infantil, vacinas, consultas de rotina e cuidados preventivos.', icone: 'fa-baby' },
-    { nome: 'Ginecologia', descricao: 'Saúde da mulher em todas as fases: exames preventivos, planejamento familiar, pré-natal e acompanhamento hormonal.', icone: 'fa-venus' },
-    { nome: 'Psicologia', descricao: 'Apoio psicológico para saúde mental, equilíbrio emocional, terapia individual, de casal e online.', icone: 'fa-brain' },
+    { nome: 'Curativos e Procedimentos', descricao: 'Realização de curativos simples e complexos, retirada de pontos, sondagens e demais procedimentos técnicos no domicílio.', icone: 'fa-bandage' },
+    { nome: 'Administração de Medicação', descricao: 'Aplicação segura de medicamentos via oral, intramuscular, subcutânea e endovenosa com prescrição médica.', icone: 'fa-syringe' },
+    { nome: 'Home Care', descricao: 'Assistência de enfermagem domiciliar contínua para pacientes acamados, pós-cirúrgicos ou em recuperação prolongada.', icone: 'fa-house-chimney-medical' },
+    { nome: 'Monitoramento de Saúde', descricao: 'Aferição de pressão arterial, glicemia, saturação de oxigênio e demais sinais vitais com relatório ao médico responsável.', icone: 'fa-heart-pulse' },
+    { nome: 'Vacinação', descricao: 'Aplicação de vacinas do calendário adulto e infantil no conforto do seu lar, com registro e orientação completos.', icone: 'fa-shield-virus' },
+    { nome: 'Orientação em Saúde', descricao: 'Educação em saúde para pacientes e familiares: cuidados preventivos, higiene, alimentação e uso correto de medicamentos.', icone: 'fa-book-medical' },
   ];
 
   const stmt = db.prepare('INSERT INTO especialidades (nome, descricao, icone) VALUES (?, ?, ?)');
@@ -65,10 +67,11 @@ function seedData() {
 
   // Seed some demo appointments
   const demos = [
-    ['Maria Oliveira', 'maria@email.com', '(31) 99999-1111', 1, '2025-06-10', '09:00', 'Consulta de rotina', 'pendente'],
-    ['João Silva', 'joao@email.com', '(31) 99999-2222', 2, '2025-06-10', '10:30', 'Acompanhamento pediátrico', 'confirmado'],
-    ['Ana Souza', 'ana@email.com', '(31) 99999-3333', 3, '2025-06-11', '14:00', 'Preventivo anual', 'pendente'],
-    ['Carlos Mendes', 'carlos@email.com', '(31) 99999-4444', 4, '2025-06-12', '16:00', 'Primeira consulta', 'pendente'],
+    ['Maria Oliveira', 'maria@email.com', '(31) 99999-1111', 1, '2026-06-22', '09:00', 'Curativo pós-cirúrgico', 'pendente'],
+    ['João Silva', 'joao@email.com', '(31) 99999-2222', 4, '2026-06-22', '10:30', 'Monitoramento de pressão arterial', 'confirmado'],
+    ['Ana Souza', 'ana@email.com', '(31) 99999-3333', 2, '2026-06-23', '14:00', 'Aplicação de insulina', 'pendente'],
+    ['Carlos Mendes', 'carlos@email.com', '(31) 99999-4444', 3, '2026-06-24', '16:00', 'Paciente acamado — avaliação inicial', 'pendente'],
+    ['Patrícia Lima', 'patricia@email.com', '(31) 99999-5555', 5, '2026-06-25', '08:00', 'Vacina da gripe', 'confirmado'],
   ];
 
   const stmt2 = db.prepare('INSERT INTO agendamentos (nome_paciente, email, telefone, especialidade_id, data_consulta, hora_consulta, mensagem, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');

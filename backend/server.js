@@ -29,9 +29,9 @@ db.getDb().then(() => {
   });
 
   app.listen(PORT, () => {
-    console.log(`\n🚀 Mais Médicos rodando em http://localhost:${PORT}`);
+    console.log(`\n🚀 CuidarBem rodando em http://localhost:${PORT}`);
     console.log(`   Admin: http://localhost:${PORT}/admin.html`);
-    console.log(`   Login: admin@maismedicos.com / medicina2025\n`);
+    console.log(`   Login: admin@cuidarbem.com.br / enfermagem2026\n`);
   });
 }).catch(err => {
   console.error('❌ Erro ao inicializar banco:', err);

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Painel Admin — Mais Médicos</title>
+<title>Painel Admin — CuidarBem</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
 <div class="admin-header">
   <a href="index.html" class="logo">
     <div class="logo-icon"><i class="fas fa-heart-pulse"></i></div>
-    Mais<span style="color:var(--mint)">Médicos</span>
+    Cuidar<span style="color:var(--mint)">Bem</span>
     <span style="font-size:.72rem;font-weight:500;color:var(--muted);margin-left:8px;padding:3px 10px;background:var(--mint-lt);border-radius:100px">Admin</span>
   </a>
   <div class="admin-header-right">
@@ -30,7 +30,7 @@
 <!-- ══ ADMIN CONTENT ════════════════════════════════════════ -->
 <div class="admin-container">
   <h1 class="admin-title">Painel de Agendamentos</h1>
-  <p class="admin-subtitle">Gerencie todas as consultas e agendamentos da clínica</p>
+  <p class="admin-subtitle">Gerencie todas as solicitações de atendimento de enfermagem</p>
 
   <!-- Stats -->
   <div class="stats-row" id="statsRow">
@@ -42,7 +42,7 @@
 
   <!-- Chart -->
   <div class="chart-card" id="chartCard">
-    <h3><i class="fas fa-chart-bar" style="margin-right:8px;color:var(--mint)"></i>Agendamentos por Especialidade</h3>
+    <h3><i class="fas fa-chart-bar" style="margin-right:8px;color:var(--mint)"></i>Agendamentos por Serviço</h3>
     <div class="chart-bars" id="chartBars">
       <div class="spec-loading"><i class="fas fa-spinner fa-spin"></i></div>
     </div>
@@ -70,7 +70,7 @@
         <tr>
           <th>#</th>
           <th>Paciente</th>
-          <th>Especialidade</th>
+          <th>Serviço</th>
           <th>Data & Hora</th>
           <th>Contato</th>
           <th>Status</th>
